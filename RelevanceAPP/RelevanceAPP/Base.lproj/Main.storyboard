@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20036.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20018.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RelevanceAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="209" translatesAutoresizingMaskIntoConstraints="NO" id="zCD-QW-Dfn">
+                                <rect key="frame" x="-3" y="52.5" width="420" height="791"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IM-0001-13" translatesAutoresizingMaskIntoConstraints="NO" id="s1y-YX-qx1">
+                                        <rect key="frame" x="0.0" y="0.0" width="420" height="512"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npp-bN-jPp">
+                                        <rect key="frame" x="0.0" y="721" width="420" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irr-vN-DoQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="210" height="70"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Relevant"/>
+                                                <connections>
+                                                    <action selector="relevantButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kFp-8n-X4n"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEc-po-hSm">
+                                                <rect key="frame" x="210" y="0.0" width="210" height="70"/>
+                                                <color key="tintColor" red="0.99474970620000003" green="0.90637585129999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Irrelevant"/>
+                                                <connections>
+                                                    <action selector="irrelevantButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vvw-Ne-Rck"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="420" id="RrU-d3-zKF"/>
+                                            <constraint firstAttribute="height" constant="70" id="ujr-L8-CtQ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="npp-bN-jPp" firstAttribute="leading" secondItem="zCD-QW-Dfn" secondAttribute="leading" id="fCh-TD-750"/>
+                                    <constraint firstItem="npp-bN-jPp" firstAttribute="top" secondItem="s1y-YX-qx1" secondAttribute="bottom" constant="75" id="uA8-6H-8cT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zCD-QW-Dfn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OaS-vj-jTi"/>
+                            <constraint firstItem="zCD-QW-Dfn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dec-L1-8lM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageLoad" destination="s1y-YX-qx1" id="lBa-pt-S31"/>
+                        <outlet property="irrelevantOut" destination="eEc-po-hSm" id="9U2-nV-Ab2"/>
+                        <outlet property="relevantOut" destination="irr-vN-DoQ" id="hfj-xz-viO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="84.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IM-0001-13" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
